@@ -13,3 +13,9 @@ npm init -y && npm install style-dictionary
 ```
 
 and then run the above command.
+
+## Format json-File
+
+Alias and semantic token must be named to get no duplicate color names and error while build process -> alias.color and semantic.color
+
+Remove set-names, $themes- and $metadata-object

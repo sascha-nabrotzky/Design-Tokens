@@ -1,6 +1,7 @@
 {
     "scripts": {
-        "build": "style-dictionary build"
+        "build": "npm run tokens:flatten && style-dictionary build",
+        "tokens:flatten": "node scripts/flatten-tokens.js"
     },
     "devDependencies": {
         "style-dictionary": "^5.4.2"
