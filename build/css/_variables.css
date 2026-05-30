@@ -1,0 +1,60 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --primitives-space-01: 4;
+  --primitives-neutral-50: #fffbf7;
+  --primitives-neutral-100: #d2d2d2;
+  --primitives-neutral-200: #a6a6a6;
+  --primitives-neutral-300: #797979;
+  --primitives-neutral-400: #4d4d4d;
+  --primitives-neutral-500: #202020;
+  --primitives-scale: 2rem;
+  --primitives-rose-500: #c8b7c9;
+  --primitives-eucalyptus-500: #9cb2a5;
+  --primitives-blush-500: #9d7982;
+  --primitives-green-500: #334747;
+  --primitives-font-size-hero: 69;
+  --primitives-font-size-3xl: 44;
+  --primitives-font-size-4xl: 55;
+  --primitives-font-size-2xl: 35;
+  --primitives-font-size-small: 14;
+  --primitives-font-size-base: 18;
+  --primitives-font-size-hero-accent: 120;
+  --primitives-font-size-lg: 23;
+  --primitives-font-size-xl: 28;
+  --primitives-slate-500: #8ba4b3;
+  --primitives-sand-500: #e3dbd3;
+  --primitives-merlot-500: #733236;
+  --primitives-dimension-base: 4rem;
+  --primitives-space-02: var(--primitives-space-01)*var(--primitives-scale);
+  --primitives-br-md: var(--primitives-dimension-base)*var(--primitives-scale);
+  --primitives-br-xs: var(--primitives-dimension-base)-var(--primitives-scale);
+  --primitives-br-sm: var(--primitives-dimension-base);
+  --alias-light-color-brand-01-500: var(--primitives-merlot-500);
+  --alias-light-color-brand-02-500: var(--primitives-sand-500);
+  --alias-light-color-brand-04-500: var(--primitives-rose-500);
+  --alias-light-color-brand-03-500: var(--primitives-green-500);
+  --alias-light-color-brand-05-500: var(--primitives-slate-500);
+  --alias-light-color-brand-07-500: var(--primitives-eucalyptus-500);
+  --alias-light-color-brand-06-500: var(--primitives-blush-500);
+  --alias-light-color-text-muted: var(--primitives-neutral-300);
+  --alias-light-color-text-default: var(--primitives-neutral-500);
+  --alias-light-color-text-inverse: var(--primitives-neutral-50);
+  --semantic-font-size-headline-01: var(--primitives-font-size-4xl);
+  --primitives-br-lg: var(--primitives-br-md)*var(--primitives-scale);
+  --primitives-space-03: var(--primitives-space-02)*var(--primitives-scale);
+  --semantic-color-body-bg: var(--alias-light-color-brand-02-500);
+  --semantic-color-body-text: var(--alias-light-color-text-default);
+  --semantic-color-button-cta-primary-default: var(--alias-light-color-brand-01-500);
+  --semantic-color-button-cta-secondary-default: var(--alias-light-color-brand-03-500);
+  --semantic-color-button-cta-tertiary-default: var(--alias-light-color-brand-05-500);
+  --semantic-space-button-padding-block-default: var(--primitives-space-02);
+  --primitives-space-04: var(--primitives-space-03)*var(--primitives-scale);
+  --semantic-border-radius-btn-primary-default: var(--primitives-br-lg);
+  --primitives-space-05: var(--primitives-space-04)*var(--primitives-scale);
+  --primitives-space-06: var(--primitives-space-05)*var(--primitives-scale);
+  --semantic-space-button-padding-inline-default: var(--primitives-space-05);
+  --primitives-space-07: var(--primitives-space-06)*var(--primitives-scale);
+}
