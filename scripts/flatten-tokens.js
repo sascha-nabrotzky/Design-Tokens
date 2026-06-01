@@ -3,7 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const inputArg = process.argv[2] || "tokens-unformatted/tokens.json";
+const inputArg = process.argv[2] || "tokens/tokens.json";
 const outputArg = process.argv[3] || "tokens/tokens.flattened.json";
 
 const inputPath = path.resolve(process.cwd(), inputArg);
@@ -35,7 +35,7 @@ function main() {
     for (const [childKey, childValue] of Object.entries(topLevelValue)) {
       if (Object.prototype.hasOwnProperty.call(result, childKey)) {
         console.warn(
-          `Warning: key "${childKey}" already exists and will be overwritten by "${topLevelKey}".`
+          `Warning: key "${childKey}" already exists and will be overwritten by "${topLevelKey}".`,
         );
       }
 
