@@ -33,7 +33,16 @@ Die Werte sind als `fontSizes` typisiert. Bei neuen Groessen ist die bestehende 
 
 ## Semantische Verwendung
 
-Semantische Tokens sollen die Textrolle ausdruecken. Der vorhandene Alias `semantic.sem.font.size.headline.01` verweist auf `primitive.font.size.4xl` und ist bei einer Aenderung der Headline-Verwendung zu beruecksichtigen.
+Semantische Tokens sollen die Textrolle ausdruecken. Die Headline-Aliase sind wie folgt zugeordnet:
+
+- `headline.01`: `4xl` (H1)
+- `headline.02`: `3xl` (H2)
+- `headline.03`: `2xl` (H3)
+- `headline.04`: `xl` (H4)
+- `headline.05`: `lg` (H5)
+- `headline.06`: `base` (H6)
+
+Fuer typische Textarten stehen die semantischen Tokens `body`, `body-small`, `label`, `label-small`, `caption` und `button` zur Verfuegung. `body`, `label` und `button` referenzieren `base`; `body-small`, `label-small` und `caption` referenzieren `small`.
 
 `base` ist fuer normalen Lesetext vorgesehen, `small` fuer kleinere UI-Texte und `lg` bis `4xl` fuer gestufte Ueberschriften. `hero` und `hero-accent` sind ausschliesslich fuer besonders prominente Hero-Inhalte zu verwenden.
 

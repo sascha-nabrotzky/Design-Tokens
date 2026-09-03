@@ -119,6 +119,17 @@
   --sem-color-button-cta-pressed: var(--color-merlot-700);
   --sem-color-button-cta-disabled: var(--color-merlot-200);
   --sem-font-size-headline-01: var(--font-size-4xl);
+  --sem-font-size-headline-02: var(--font-size-3xl);
+  --sem-font-size-headline-03: var(--font-size-2xl);
+  --sem-font-size-headline-04: var(--font-size-xl);
+  --sem-font-size-headline-05: var(--font-size-lg);
+  --sem-font-size-headline-06: var(--font-size-base);
+  --sem-font-size-body: var(--font-size-base);
+  --sem-font-size-body-small: var(--font-size-small);
+  --sem-font-size-label: var(--font-size-base);
+  --sem-font-size-label-small: var(--font-size-small);
+  --sem-font-size-caption: var(--font-size-small);
+  --sem-font-size-button: var(--font-size-base);
   --br-lg: var(--br-md)*var(--scale);
   --space-03: var(--space-02)*var(--scale);
   --sem-space-button-padding-block: var(--space-02);

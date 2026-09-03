@@ -679,7 +679,62 @@
             "$value": "{font.size.4xl}",
             "$type": "fontSizes",
             "$description": ""
+          },
+          "02": {
+            "$value": "{font.size.3xl}",
+            "$type": "fontSizes",
+            "$description": ""
+          },
+          "03": {
+            "$value": "{font.size.2xl}",
+            "$type": "fontSizes",
+            "$description": ""
+          },
+          "04": {
+            "$value": "{font.size.xl}",
+            "$type": "fontSizes",
+            "$description": ""
+          },
+          "05": {
+            "$value": "{font.size.lg}",
+            "$type": "fontSizes",
+            "$description": ""
+          },
+          "06": {
+            "$value": "{font.size.base}",
+            "$type": "fontSizes",
+            "$description": ""
           }
+        },
+        "body": {
+          "$value": "{font.size.base}",
+          "$type": "fontSizes",
+          "$description": ""
+        },
+        "body-small": {
+          "$value": "{font.size.small}",
+          "$type": "fontSizes",
+          "$description": ""
+        },
+        "label": {
+          "$value": "{font.size.base}",
+          "$type": "fontSizes",
+          "$description": ""
+        },
+        "label-small": {
+          "$value": "{font.size.small}",
+          "$type": "fontSizes",
+          "$description": ""
+        },
+        "caption": {
+          "$value": "{font.size.small}",
+          "$type": "fontSizes",
+          "$description": ""
+        },
+        "button": {
+          "$value": "{font.size.base}",
+          "$type": "fontSizes",
+          "$description": ""
         }
       }
     }
