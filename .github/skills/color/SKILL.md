@@ -20,6 +20,12 @@ Nutze diesen Skill nur für Farbwerte, Farbrampen, Farbrollen oder Farbzuordnung
 `semantic`
 `component`
 
+## Themes
+
+- Es gibt ein Light Theme und ein Dark Theme. Beide Themes sind in der Quelle `tokens/tokens.json` enthalten.
+
+Light und Dark müssen getrennte Token-Sets verwenden, sobald sich ihre Content-Werte unterscheiden. Die Theme-Metadaten allein ändern keine Werte; die ausgewählten Sets müssen im Flattening- und Build-Workflow berücksichtigt werden.
+
 ## Farben
 
 Farben sind in der Regel in 100er-Schritten angelegt: Tints liegen unterhalb der Basisfarbe, Shades oberhalb. `500` ist die Basis, sofern die jeweilige Farbfamilie diese Stufe besitzt; Ausnahmen wie `neutral.50` bleiben erhalten.
@@ -36,10 +42,15 @@ Die Farbfamilien werden nicht pauschal in `primary`, `secondary` und `tertiary` 
 - `accent`: Merlot, Blush, Rose und Slate fuer Hervorhebungen und unterstuetzende Flaechen
 - `action`: semantische Aktionsfarben wie `primary`, `secondary`, `tertiary` und `cta`
 
+- Level-Farben: `0-lowest`, `1-low`, `2-mid`, `3-high`, `4-highest` Hauptsächlich für Hintergrundfarben für Buttons, Cards, Panels, etc.
+
+Für `content` können die semantischen Rollen `primary`, `secondary`, `tertiary`, `inverse` und `disabled` verwendet werden. `primary` steht für den wichtigsten Inhalt, `secondary` und `tertiary` für abgestufte Inhalte, `inverse` für Inhalte auf dunklen Flächen und `disabled` für nicht verfügbare Inhalte. Diese Rollen dürfen je Theme auf unterschiedliche Primitive verweisen.
+
 Innerhalb jeder Farbfamilie bleibt `500` die Basisfarbe. Die Werte `100` bis `400` werden bevorzugt als Tints fuer Flaechen verwendet, waehrend `600` bis `900` als Shades fuer Text, starke Konturen, wichtige Aktionen und aktive Zustaende dienen. Semantische Tokens sollen Rollen statt Farbnamen ausdruecken und auf passende Primitive verweisen.
 
 ## Validierung
 
 1. Prüfen, ob die passende Farbfamilie und Stufe bereits existiert.
 2. Semantische Rollen auf fachlich passende Primitive abbilden.
-3. Nach Änderungen `npm run build` ausführen und die betroffenen `--color-*`-Variablen prüfen.
+3. Keine generischen State-Namen wie `default` verwenden; bei Zuständen `enabled`, `hover`, `focus`, `pressed`, `selected` und `disabled` nutzen.
+4. Nach Änderungen `npm run build` ausführen und die betroffenen `--color-*`-Variablen prüfen.

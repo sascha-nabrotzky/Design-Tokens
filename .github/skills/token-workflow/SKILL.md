@@ -19,7 +19,9 @@ Nutze diesen Skill für Änderungen an Token-Werten, Aliasen, Namen, Hierarchien
 
 - Die verschachtelte Benennung der Quelle beibehalten; generierte CSS-Namen ergeben sich daraus.
 - Semantische Namen sollen Rolle und Kontext ausdrücken, Primitive dagegen Wert oder Skala.
+- `default` ist kein eigener State-Name für semantische Tokens. Wenn ein Token Zustände modelliert, müssen konkrete Zustände wie `enabled`, `hover`, `focus`, `pressed`, `selected` und `disabled` verwendet werden.
 - Zustände wie `enabled`, `hover`, `focus`, `pressed`, `selected` und `disabled` nur prüfen, wenn der konkrete Token diese Zustände tatsächlich unterstützt.
+- Ein Token darf nicht nur wegen eines Standardzustands als `default` benannt werden, wenn ein sachlich passenderer Zustand existiert.
 
 ## Semantische Prüfung
 
