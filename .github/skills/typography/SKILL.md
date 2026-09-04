@@ -51,6 +51,7 @@ Fuer typische Textarten stehen die semantischen Tokens `body`, `body-small`, `la
 Zeilenhoehen kommen aus PenPot und werden dort im Bereich `Typography` der Tokens behandelt. Sie sind eine typografische Eigenschaft und kein allgemeiner Abstand aus dem `space`-Raster. Sie sollen deshalb unter einer eigenen Typografie-Hierarchie definiert und semantisch nach Textrolle verwendet werden.
 
 - `body-text` verwendet eine Zeilenhoehe von `1.4`.
+- Darauf achten, dass Schriftgrößen und Zeilenabstände im Sinne der Barrierefreiheit passend sind, insbesondere für Menschen mit Sehbehinderungen.
 - Kleine UI-Texte benoetigen meist eine etwas kompaktere, aber weiterhin gut lesbare Zeilenhoehe.
 - Ueberschriften und Display-Texte benoetigen in der Regel eine kompaktere Zeilenhoehe, etwa `1.05` bis `1.25` der Schriftgroesse.
 - Mehrzeilige Texte muessen auf Lesbarkeit geprueft werden; die Zeilenhoehe darf nicht allein aus der Schriftgroesse abgeleitet werden.
