@@ -97,6 +97,7 @@
   --sem-color-surface-3-high: var(--color-sand-300);
   --sem-color-surface-1-low: var(--color-sand-100);
   --sem-color-surface-0-lowest: var(--color-neutral-50);
+  --sem-color-focus-ring: var(--color-green-700); /** Sichtbarer Tastaturfokus auf hellen Oberflaechen */
   --sem-color-button-cta-enabled: var(--color-merlot-500);
   --sem-color-button-cta-pressed: var(--color-merlot-700);
   --sem-color-button-cta-focus: var(--color-merlot-600);

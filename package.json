@@ -1,9 +1,10 @@
 {
-  "scripts": {
-    "build": "npm run tokens:flatten && style-dictionary build",
-    "tokens:flatten": "node scripts/flatten-tokens.js"
-  },
-  "devDependencies": {
-    "style-dictionary": "^5.4.2"
-  }
+    "scripts": {
+        "build": "npm run tokens:validate-a11y && npm run tokens:flatten && style-dictionary build",
+        "tokens:validate-a11y": "node scripts/validate-a11y-tokens.js",
+        "tokens:flatten": "node scripts/flatten-tokens.js"
+    },
+    "devDependencies": {
+        "style-dictionary": "^5.4.2"
+    }
 }

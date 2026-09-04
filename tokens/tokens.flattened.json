@@ -533,6 +533,13 @@
           "$description": ""
         }
       },
+      "focus": {
+        "ring": {
+          "$value": "{color.green.700}",
+          "$type": "color",
+          "$description": "Sichtbarer Tastaturfokus auf hellen Oberflaechen"
+        }
+      },
       "button": {
         "cta": {
           "enabled": {
