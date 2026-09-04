@@ -3,21 +3,21 @@
  */
 
 :root {
-  --space-01: 4;
-  --scale: 2rem;
-  --serif: Americana BT;
-  --font-size-hero: 69;
-  --font-size-3xl: 44;
-  --font-size-4xl: 55;
-  --font-size-2xl: 35;
-  --font-size-small: 14;
-  --font-size-base: 18;
-  --font-size-hero-accent: 120;
-  --font-size-lg: 23;
-  --font-size-xl: 28;
+  --space-01: 4px;
+  --scale: 2px;
+  --serif: 'Americana BT';
+  --font-size-hero: 69px;
+  --font-size-3xl: 44px;
+  --font-size-4xl: 55px;
+  --font-size-2xl: 35px;
+  --font-size-small: 14px;
+  --font-size-base: 18px;
+  --font-size-hero-accent: 120px;
+  --font-size-lg: 23px;
+  --font-size-xl: 28px;
   --regular: 400;
-  --sans-serif: Source Sans 3;
-  --dimension-base: 4rem;
+  --sans-serif: 'Source Sans 3';
+  --dimension-base: 4px;
   --bold: 700;
   --color-sand-100: #f9f8f6;
   --color-sand-200: #f4f1ed;
@@ -88,9 +88,9 @@
   --color-rose-700: #786e79;
   --color-rose-800: #504950;
   --color-rose-900: #282528;
-  --space-02: var(--space-01)*var(--scale);
-  --br-md: var(--dimension-base)*var(--scale);
-  --br-xs: var(--dimension-base)-var(--scale);
+  --space-02: 8px;
+  --br-md: 8px;
+  --br-xs: 2px;
   --br-sm: var(--dimension-base);
   --sem-color-surface-2-mid: var(--color-sand-200);
   --sem-color-surface-4-highest: var(--color-sand-400);
@@ -135,25 +135,25 @@
   --sem-font-size-label-small: var(--font-size-small);
   --sem-font-size-body-small: var(--font-size-small);
   --sem-font-size-button: var(--font-size-base);
-  --br-lg: var(--br-md)*var(--scale);
-  --space-03: var(--space-02)*var(--scale);
+  --sem-typography-body-text: 400 18px/1.5 'Source Sans 3'; /** Normaler Text */
+  --sem-typography-body-small-text: 400 14px/1.4 'Source Sans 3'; /** Kleiner Lesetext */
+  --sem-typography-label: 700 18px/1.2 'Source Sans 3'; /** Standardbeschriftung */
+  --sem-typography-label-small: 700 14px/1.2 'Source Sans 3'; /** Kleine Beschriftung */
+  --sem-typography-caption: 400 14px/1.2 'Source Sans 3'; /** Zusatz- und Metainformationen */
+  --sem-typography-button: 700 18px/1.2 'Source Sans 3'; /** Text fuer Buttons */
+  --sem-typography-headline-01: 700 55px/1.15 'Americana BT'; /** Groesste Ueberschrift */
+  --sem-typography-headline-02: 700 44px/1.15 'Americana BT'; /** Ueberschrift zweiter Ebene */
+  --sem-typography-headline-03: 700 35px/1.15 'Americana BT'; /** Ueberschrift dritter Ebene */
+  --sem-typography-headline-04: 700 28px/1.15 'Americana BT'; /** Ueberschrift vierter Ebene */
+  --sem-typography-headline-05: 700 23px/1.15 'Americana BT'; /** Ueberschrift fuenfter Ebene */
+  --sem-typography-headline-06: 700 18px/1.15 'Americana BT'; /** Ueberschrift sechster Ebene */
+  --br-lg: 16px;
+  --space-03: 16px;
   --sem-space-button-padding-block: var(--space-02);
-  --sem-typography-body-text: 16px sans-serif; /** Normaler Text */
-  --sem-typography-body-small-text: 16px sans-serif; /** Kleiner Lesetext */
-  --sem-typography-label: 16px sans-serif; /** Standardbeschriftung */
-  --sem-typography-label-small: 16px sans-serif; /** Kleine Beschriftung */
-  --sem-typography-caption: 16px sans-serif; /** Zusatz- und Metainformationen */
-  --sem-typography-button: 16px sans-serif; /** Text fuer Buttons */
-  --sem-typography-headline-01: 16px sans-serif; /** Groesste Ueberschrift */
-  --sem-typography-headline-02: 16px sans-serif; /** Ueberschrift zweiter Ebene */
-  --sem-typography-headline-03: 16px sans-serif; /** Ueberschrift dritter Ebene */
-  --sem-typography-headline-04: 16px sans-serif; /** Ueberschrift vierter Ebene */
-  --sem-typography-headline-05: 16px sans-serif; /** Ueberschrift fuenfter Ebene */
-  --sem-typography-headline-06: 16px sans-serif; /** Ueberschrift sechster Ebene */
-  --space-04: var(--space-03)*var(--scale);
+  --space-04: 32px;
   --sem-border-radius-btn-primary: var(--br-lg);
-  --space-05: var(--space-04)*var(--scale);
-  --space-06: var(--space-05)*var(--scale);
+  --space-05: 64px;
+  --space-06: 128px;
   --sem-space-button-padding-inline: var(--space-05);
-  --space-07: var(--space-06)*var(--scale);
+  --space-07: 256px;
 }

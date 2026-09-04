@@ -37,7 +37,18 @@ Nur die Flatten-Datei erzeugen:
 npm run tokens:flatten
 ```
 
-Die Style-Dictionary-Konfiguration liegt in `config.json`. Sie verwendet die Flatten-Datei als Quelle und schreibt CSS nach `build/css/`.
+Die Style-Dictionary-Konfiguration liegt in `scripts/build-css.mjs`. Sie verwendet die Flatten-Datei als Quelle, registriert die Tokens-Studio-Transforms aus `@tokens-studio/sd-transforms` (für Typografie-Komposit-Werte und Math-Ausdrücke wie `{space.04}*{scale}`) und schreibt CSS nach `build/css/`.
+
+### Warum kein reines `style-dictionary build`?
+
+`tokens/tokens.json` ist im Tokens-Studio-Format exportiert. Das weicht in zwei Punkten vom Format ab, das Style Dictionary direkt versteht:
+
+- Typografie-Tokens nennen ihre Eigenschaften im Plural (`fontSizes`, `lineHeights`, `fontWeights`, `fontFamilies`), Style Dictionary erwartet die Einzahl (`fontSize`, `lineHeight`, …).
+- Werte können Rechenausdrücke wie `{space.04}*{scale}` sein, die vor der Ausgabe berechnet werden müssen.
+
+Ohne diese Anpassungen ignoriert Style Dictionary die Werte stillschweigend, statt einen Fehler zu werfen: Typografie-Tokens fallen alle auf denselben Standardwert (`16px sans-serif`) zurück, und Rechenausdrücke landen unausgewertet und damit als ungültiges CSS in der Ausgabe (z. B. `var(--space-01)*var(--scale)`). Die Accessibility-Prüfung merkt das nicht, weil sie ihre Werte direkt aus `tokens/tokens.json` liest statt aus dem generierten CSS.
+
+`scripts/build-css.mjs` behebt das: Ein eigener Preprocessor benennt die Plural-Eigenschaften der Typografie-Tokens in die von Style Dictionary erwartete Einzahl um, `@tokens-studio/sd-transforms` wertet die Rechenausdrücke aus, und `outputReferences` ist so konfiguriert, dass nur echte 1:1-Aliase als `var(--x)` erhalten bleiben – berechnete Werte werden vollständig aufgelöst. Beim Bearbeiten von `scripts/build-css.mjs` sollte diese Logik erhalten bleiben; ein Wechsel zurück auf die reine Style-Dictionary-CLI reproduziert den ursprünglichen Fehler.
 
 ## Accessibility-Pruefung
 
@@ -65,7 +76,7 @@ Semantische Tokens sollen auf vorhandene primitive Tokens verweisen. Vor einem n
 
 ## Änderungen prüfen
 
-Nach Änderungen an Tokens, `config.json` oder Generator- und Validierungsskripten:
+Nach Änderungen an Tokens, `scripts/build-css.mjs` oder Generator- und Validierungsskripten:
 
 ```bash
 npm run build

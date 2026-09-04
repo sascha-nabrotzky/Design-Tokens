@@ -17,6 +17,6 @@
 
 ## Kontext sparen
 
-- Nur den zum Auftrag passenden Skill laden: `color`, `spacing`, `typography` oder `token-workflow`.
+- Nur den zum Auftrag passenden Skill laden: `color`, `spacing`, `typography`, `accessibility` oder `token-workflow`.
 - Zuerst den konkreten Token-Pfad in `tokens/tokens.json` prüfen; weitere Dateien nur für die notwendige Validierung öffnen.
 - Bei reinen Dokumentationsänderungen keinen Token-Build ausführen.
