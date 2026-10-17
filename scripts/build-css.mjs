@@ -24,7 +24,11 @@ StyleDictionary.registerPreprocessor({
         return;
       }
 
-      if (node.$type === "typography" && node.$value && typeof node.$value === "object") {
+      if (
+        node.$type === "typography" &&
+        node.$value &&
+        typeof node.$value === "object"
+      ) {
         for (const [from, to] of Object.entries(RENAME)) {
           if (from in node.$value) {
             const value = node.$value[from];
@@ -44,13 +48,49 @@ StyleDictionary.registerPreprocessor({
   },
 });
 
+StyleDictionary.registerTransform({
+  name: "size/px-to-rem",
+  type: "value",
+  filter: (token) => {
+    const type = token.$type ?? token.type;
+    const isLineHeight = [type, ...(token.path ?? [])].some((part) =>
+      String(part)
+        .toLowerCase()
+        .replace(/[^a-z]/g, "")
+        .match(/^lineheights?$/),
+    );
+    const value = token.$value ?? token.value;
+    const pixelTypes = [
+      "spacing",
+      "dimension",
+      "fontSize",
+      "fontSizes",
+      "letterSpacing",
+      "borderRadius",
+    ];
+    const isPixelValue =
+      (typeof value === "string" &&
+        /^(?:-?\d+(?:\.\d+)?|\.\d+)px$/.test(value)) ||
+      (pixelTypes.includes(type) &&
+        /^-?(?:\d+(?:\.\d+)?|\.\d+)$/.test(String(value)));
+
+    return !isLineHeight && isPixelValue;
+  },
+  transform: (token) => {
+    const value = token.$value ?? token.value;
+    const pixels = typeof value === "string" ? Number.parseFloat(value) : value;
+
+    return `${pixels / 16}rem`;
+  },
+});
+
 const sd = new StyleDictionary({
   source: ["tokens/tokens.flattened.json"],
   preprocessors: ["typography-property-names", "tokens-studio"],
   platforms: {
     css: {
       transformGroup: "tokens-studio",
-      transforms: ["name/kebab"],
+      transforms: ["name/kebab", "size/px-to-rem"],
       buildPath: "build/css/",
       files: [
         {
