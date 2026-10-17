@@ -1,0 +1,32 @@
+{
+  "source": ["tokens/**/tokens.flattened.json"],
+  "platforms": {
+    "css": {
+      "transforms": [
+        "attribute/cti",
+        "name/kebab",
+        "time/seconds",
+        "html/icon",
+        "color/css",
+        "asset/url",
+        "fontFamily/css",
+        "cubicBezier/css",
+        "strokeStyle/css/shorthand",
+        "border/css/shorthand",
+        "typography/css/shorthand",
+        "transition/css/shorthand",
+        "shadow/css/shorthand"
+      ],
+      "buildPath": "build/css/",
+      "files": [
+        {
+          "destination": "_variables.css",
+          "format": "css/variables",
+          "options": {
+            "outputReferences": true
+          }
+        }
+      ]
+    }
+  }
+}
