@@ -3,12 +3,6 @@ import { register } from "@tokens-studio/sd-transforms";
 
 register(StyleDictionary);
 
-// The token source models typography composites with Tokens Studio's plural
-// property names (fontFamilies, fontSizes, lineHeights, fontWeights). Style
-// Dictionary's typography shorthand transform only recognizes the singular
-// DTCG names (fontFamily, fontSize, lineHeight, fontWeight); anything else is
-// silently ignored, which previously collapsed every typography token to a
-// "16px sans-serif" fallback in the generated CSS.
 StyleDictionary.registerPreprocessor({
   name: "typography-property-names",
   preprocessor: (dictionary) => {
