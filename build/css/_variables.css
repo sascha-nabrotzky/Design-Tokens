@@ -106,4 +106,21 @@
   --sem-color-alternative-05: var(--color-wood-300);
   --sem-color-spot-05: var(--color-wood-700);
   --sem-color-accent-05: var(--color-wood-500);
+  --sem-color-text-default: var(--color-neutral-500);
+  --sem-color-text-muted: var(--color-neutral-400);
+  --sem-space-gap-xs: var(--space-4);
+  --sem-space-gap-sm: var(--space-8);
+  --sem-space-gap-md: var(--space-16);
+  --sem-space-gap-lg: var(--space-24);
+  --sem-space-gap-xl: var(--space-32);
+  --sem-space-padding-xs: var(--space-4);
+  --sem-space-padding-sm: var(--space-8);
+  --sem-space-padding-md: var(--space-16);
+  --sem-space-padding-lg: var(--space-24);
+  --sem-space-padding-xl: var(--space-32);
+  --sem-space-layout-gutter-sm: var(--space-32);
+  --sem-space-layout-gutter-md: var(--space-48);
+  --sem-space-layout-gutter-lg: var(--space-64);
+  --sem-space-layout-gutter-xs: var(--space-16);
+  --sem-space-layout-gutter-xl: var(--space-96);
 }

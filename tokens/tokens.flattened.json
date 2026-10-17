@@ -559,6 +559,103 @@
           "$type": "color",
           "$description": ""
         }
+      },
+      "text": {
+        "default": {
+          "$value": "{color.neutral.500}",
+          "$type": "color",
+          "$description": ""
+        },
+        "muted": {
+          "$value": "{color.neutral.400}",
+          "$type": "color",
+          "$description": ""
+        }
+      }
+    },
+    "space": {
+      "gap": {
+        "xs": {
+          "$value": "{space.4}",
+          "$type": "spacing",
+          "$description": ""
+        },
+        "sm": {
+          "$value": "{space.8}",
+          "$type": "spacing",
+          "$description": ""
+        },
+        "md": {
+          "$value": "{space.16}",
+          "$type": "spacing",
+          "$description": ""
+        },
+        "lg": {
+          "$value": "{space.24}",
+          "$type": "spacing",
+          "$description": ""
+        },
+        "xl": {
+          "$value": "{space.32}",
+          "$type": "spacing",
+          "$description": ""
+        }
+      },
+      "padding": {
+        "xs": {
+          "$value": "{space.4}",
+          "$type": "spacing",
+          "$description": ""
+        },
+        "sm": {
+          "$value": "{space.8}",
+          "$type": "spacing",
+          "$description": ""
+        },
+        "md": {
+          "$value": "{space.16}",
+          "$type": "spacing",
+          "$description": ""
+        },
+        "lg": {
+          "$value": "{space.24}",
+          "$type": "spacing",
+          "$description": ""
+        },
+        "xl": {
+          "$value": "{space.32}",
+          "$type": "spacing",
+          "$description": ""
+        }
+      },
+      "layout": {
+        "gutter": {
+          "sm": {
+            "$value": "{space.32}",
+            "$type": "spacing",
+            "$description": ""
+          },
+          "md": {
+            "$value": "{space.48}",
+            "$type": "spacing",
+            "$description": ""
+          },
+          "lg": {
+            "$value": "{space.64}",
+            "$type": "spacing",
+            "$description": ""
+          },
+          "xs": {
+            "$value": "{space.16}",
+            "$type": "spacing",
+            "$description": ""
+          },
+          "xl": {
+            "$value": "{space.96}",
+            "$type": "spacing",
+            "$description": ""
+          }
+        }
       }
     }
   }
