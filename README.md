@@ -46,7 +46,7 @@ Die Style-Dictionary-Konfiguration liegt in `scripts/build-css.mjs`. Sie verwend
 - Typografie-Tokens nennen ihre Eigenschaften im Plural (`fontSizes`, `lineHeights`, `fontWeights`, `fontFamilies`), Style Dictionary erwartet die Einzahl (`fontSize`, `lineHeight`, …).
 - Werte können Rechenausdrücke wie `{space.04}*{scale}` sein, die vor der Ausgabe berechnet werden müssen.
 
-Ohne diese Anpassungen ignoriert Style Dictionary die Werte stillschweigend, statt einen Fehler zu werfen: Typografie-Tokens fallen alle auf denselben Standardwert (`16px sans-serif`) zurück, und Rechenausdrücke landen unausgewertet und damit als ungültiges CSS in der Ausgabe (z. B. `var(--space-01)*var(--scale)`). Die Accessibility-Prüfung merkt das nicht, weil sie ihre Werte direkt aus `tokens/tokens.json` liest statt aus dem generierten CSS.
+Der Preprocessor haelt die Ausgabe kompatibel mit Tokens-Studio-Typografie-Kompositen, sofern solche Tokens in der Quelle vorkommen. Die aktuelle Quelle verwendet jedoch einzelne `fontSizes`-Tokens und enthaelt weder Typografie-Komposite noch `scale`-basierte Rechenausdruecke. Bei Aenderungen zuerst die tatsaechlichen Token-Typen und Werte in `tokens/tokens.json` pruefen.
 
 `scripts/build-css.mjs` behebt das: Ein eigener Preprocessor benennt die Plural-Eigenschaften der Typografie-Tokens in die von Style Dictionary erwartete Einzahl um, `@tokens-studio/sd-transforms` wertet die Rechenausdrücke aus, und `outputReferences` ist so konfiguriert, dass nur echte 1:1-Aliase als `var(--x)` erhalten bleiben – berechnete Werte werden vollständig aufgelöst. Beim Bearbeiten von `scripts/build-css.mjs` sollte diese Logik erhalten bleiben; ein Wechsel zurück auf die reine Style-Dictionary-CLI reproduziert den ursprünglichen Fehler.
 
@@ -58,19 +58,14 @@ Die Accessibility-Validierung läuft automatisch vor jedem vollständigen Build.
 npm run tokens:validate-a11y
 ```
 
-Der Check löst Alias-Referenzen auf und prüft die bewusst festgelegten semantischen Kombinationen:
+Der Check loest semantische Farb-Aliase auf und stellt sicher, dass sie auf sechsstellige Hex-Farben verweisen. Ausserdem prueft er `sem.font-size.body` auf mindestens `16px` und `sem.font-size.body-small` auf mindestens `14px`.
 
-- Text-Kontrast von `sem.color.content.primary` und `sem.color.content.secondary` auf `sem.color.surface.0-lowest` mit mindestens `4.5:1`
-- Kontrast des sichtbaren Fokus-Rings `sem.color.focus.ring` auf allen definierten `sem.color.surface`-Stufen mit mindestens `3:1`
-- Lesetext: `sem.typography.body-text` mit mindestens `16px` Schriftgröße und `1.5` Zeilenhöhe
-- Kleiner Lesetext: `sem.typography.body-small-text` mit mindestens `14px` Schriftgröße und `1.4` Zeilenhöhe
-
-Neue semantische Content-, Surface- oder Fokusrollen müssen mit ihren vorgesehenen Paaren in `scripts/validate-a11y-tokens.js` ergänzt werden. Die Detailregeln stehen in `.github/skills/accessibility/SKILL.md`.
+Die aktuelle Quelle enthaelt keine semantischen Content-/Hintergrund-Paare, keinen Fokus-Ring und keine Zeilenhoehen. Deshalb berechnet der Check derzeit keine Kontrastverhaeltnisse und bewertet keine Zeilenhoehen. Solche Regeln koennen erst ergaenzt werden, wenn die zugehoerigen Tokens in `tokens/tokens.json` vorhanden sind. Details stehen in `.github/skills/accessibility/SKILL.md`.
 
 ## Tokenstruktur
 
-- `primitive`: Rohwerte, Skalen und Farbwerte
-- `semantic`: Rollen und Aliase für konkrete Verwendungen
+- Die Quell-Sets sind `primitive` und `semantic`; semantische Rollen liegen unter `semantic.sem`.
+- Die aktuelle Quelle hat keine `component`-Gruppe. Light-/Dark-Metadaten waehlen derzeit dieselben beiden Sets und liefern keine unterschiedlichen Tokenwerte.
 
 Semantische Tokens sollen auf vorhandene primitive Tokens verweisen. Vor einem neuen Token daher prüfen, ob bereits ein fachlich passender Wert oder Alias existiert.
 

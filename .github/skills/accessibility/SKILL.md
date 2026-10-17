@@ -1,7 +1,7 @@
 ---
 name: accessibility
-description: 'Nutze diesen Skill bei Aenderungen an barrierefreien Farb-, Typografie- oder Fokus-Design-Tokens und ihrer Validierung.'
-argument-hint: 'Beschreibe das betroffene Token oder die A11y-Anforderung'
+description: "Nutze diesen Skill bei Aenderungen an barrierefreien Farb-, Typografie- oder Fokus-Design-Tokens und ihrer Validierung."
+argument-hint: "Beschreibe das betroffene Token oder die A11y-Anforderung"
 ---
 
 # Accessibility-Token-Workflow
@@ -17,28 +17,21 @@ Nutze diesen Skill fuer Aenderungen an den barrierefreien Eigenschaften von Farb
 
 Die generierten Dateien werden nie manuell bearbeitet.
 
-## Farbkontrast
+## Aktuelle Tokenstruktur
 
-- Kontrast nur fuer bewusst definierte semantische Vordergrund-/Hintergrund-Paare pruefen, nie fuer jede moegliche Kombination primitiver Farben.
-- Normaler Lesetext braucht mindestens `4.5:1` Kontrast.
-- Fokusindikatoren brauchen mindestens `3:1` Kontrast gegen alle Oberflaechen, auf denen sie vorgesehen sind.
-- Neue Content-, Surface- oder Fokusrollen als semantische Aliase modellieren und die zugehoerigen Paare im Validator ergaenzen.
+- Semantische Farb-Tokens liegen unter `semantic.sem.color`: aktuell `surface.01` bis `.05`, `soft-ui.01` bis `.05` sowie `alternative.05`, `spot.05` und `accent.05`.
+- Semantische Schriftgroessen liegen unter `semantic.sem.font-size`. Fuer Lesetext prueft der Validator `body` mit mindestens `16px` und `body-small` mit mindestens `14px`.
+- Die Farb-Tokens referenzieren Primitive unter `primitive.color`; Typografie-Aliase referenzieren `primitive.font-size`.
 
-## Fokusindikator
+## Grenzen der aktuellen Pruefung
 
-- Interaktive Komponenten duerfen einen Tastaturfokus nicht allein ueber eine Hintergrundfarbaenderung vermitteln.
-- Der gemeinsame Token `sem.color.focus.ring` ist fuer den sichtbaren Fokus-Ring auf hellen Oberflaechen vorgesehen.
-- Fuer abweichende Hintergruende eine fachlich begruendete Gegenrolle anlegen und gegen diese Hintergruende validieren.
-
-## Typografie
-
-- `sem.typography.body-text` braucht mindestens `16px` und eine dimensionslose Zeilenhoehe von `1.5`.
-- `sem.typography.body-small-text` braucht mindestens `14px` und eine dimensionslose Zeilenhoehe von `1.4`.
-- Labels, Buttons und Ueberschriften werden nicht pauschal wie Lesetext bewertet; ihre Anforderung wird erst bei einer konkreten, dokumentierten Verwendung in den Validator aufgenommen.
+- Es gibt derzeit keine semantischen Vordergrund-/Hintergrund-Paare (`content`), keinen Fokus-Ring-Token und keine Zeilenhoehen-Tokens. Der Validator kann deshalb weder Kontrastverhaeltnisse noch Fokuskontrast oder Zeilenhoehen bewerten.
+- Keine solchen Rollen oder Werte erfinden. Wenn sie in `tokens/tokens.json` eingefuehrt werden, die konkreten vorgesehenen Paare beziehungsweise Rollen dokumentieren und erst dann passende Kontrast- oder Zeilenhoehenregeln ergaenzen.
+- Der Validator prueft aktuell, dass alle semantischen Farb-Aliase auf sechsstellige Hex-Farben aufloesen und die beiden Lesetext-Schriftgroessen ihre Mindestwerte einhalten.
 
 ## Validierung
 
-1. Den konkreten Token-Pfad in `tokens/tokens.json` und die betroffene Regel im Validator pruefen.
-2. Nur die Quelle oder den Validator bearbeiten.
-3. `npm run tokens:validate-a11y` fuer die direkte Pruefung ausfuehren.
-4. Anschliessend `npm run build` ausfuehren und die betroffenen CSS-Variablen kontrollieren.
+1. Den konkreten Pfad in `tokens/tokens.json` und die dazu passende vorhandene Pruefung identifizieren.
+2. Nur Quelle oder Validator bearbeiten; keine generierten Dateien manuell aendern.
+3. `npm run tokens:validate-a11y` ausfuehren.
+4. Danach `npm run build` ausfuehren und die betroffenen CSS-Variablen kontrollieren.

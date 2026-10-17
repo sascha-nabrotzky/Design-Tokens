@@ -1,7 +1,7 @@
 ---
 name: token-workflow
-description: 'Nutze diesen Skill beim Hinzufügen, Ändern, Umbenennen, Löschen oder Validieren von Design-Tokens, der Flatten-Ausgabe, der Style-Dictionary-Konfiguration oder der generierten CSS-Ausgabe in diesem Repository.'
-argument-hint: 'Beschreibe das gewünschte Token oder die zu ändernde Ausgabe'
+description: "Nutze diesen Skill beim Hinzufügen, Ändern, Umbenennen, Löschen oder Validieren von Design-Tokens, der Flatten-Ausgabe, der Style-Dictionary-Konfiguration oder der generierten CSS-Ausgabe in diesem Repository."
+argument-hint: "Beschreibe das gewünschte Token oder die zu ändernde Ausgabe"
 ---
 
 # Arbeitsablauf für Design-Tokens
@@ -15,13 +15,19 @@ Nutze diesen Skill für Änderungen an Token-Werten, Aliasen, Namen, Hierarchien
 3. `npm run build` ausführen und nur die betroffenen generierten Variablen prüfen.
 4. Umbenennungen oder Löschungen öffentlicher Tokens als kompatibilitätsbrechende Änderung nennen.
 
+## Aktuelle Quellstruktur
+
+- `tokens/tokens.json` hat die Token-Sets `primitive` und `semantic`; semantische Rollen liegen unter `semantic.sem`.
+- Die aktuelle Quelle enthaelt keine `component`-Gruppe. Keine in Skills oder frueheren Tokenstaenden dokumentierten Gruppen als vorhanden voraussetzen.
+- Theme-Informationen liegen in `$themes` und `$metadata`. Light und Dark waehlen derzeit beide dieselben Sets `primitive` und `semantic`; Metadaten allein erzeugen keine unterschiedlichen Werte.
+- `tokens/tokens.flattened.json` entsteht durch Entfernen der beiden Set-Ebenen. Aliasreferenzen koennen dadurch auf Pfade wie `{font-size.base}` zeigen, waehrend die Quelle den Wert unter `primitive.font-size.base` enthaelt.
+
 ## Benennung und States
 
 - Die verschachtelte Benennung der Quelle beibehalten; generierte CSS-Namen ergeben sich daraus.
 - Semantische Namen sollen Rolle und Kontext ausdrücken, Primitive dagegen Wert oder Skala.
-- `default` ist kein eigener State-Name für semantische Tokens. Wenn ein Token Zustände modelliert, müssen konkrete Zustände wie `enabled`, `hover`, `focus`, `pressed`, `selected` und `disabled` verwendet werden.
-- Zustände wie `enabled`, `hover`, `focus`, `pressed`, `selected` und `disabled` nur prüfen, wenn der konkrete Token diese Zustände tatsächlich unterstützt.
-- Ein Token darf nicht nur wegen eines Standardzustands als `default` benannt werden, wenn ein sachlich passenderer Zustand existiert.
+- Die aktuelle Quelle modelliert keine `default`- oder Komponenten-State-Ebenen. Keine solche Hierarchie hinzufuegen, solange sie nicht Teil der konkreten Anforderung ist.
+- Zustandsnamen wie `enabled`, `hover`, `focus`, `pressed`, `selected` und `disabled` nur verwenden, wenn die betreffende Rolle diese Zustaende tatsaechlich modelliert.
 
 ## Semantische Prüfung
 

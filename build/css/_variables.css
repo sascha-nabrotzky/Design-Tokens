@@ -3,77 +3,45 @@
  */
 
 :root {
-  --space-2: calc(
-    2 / 16 * 1rem
-  ); /** Haarlinien-Abstände, extrem feine UI-Tweakings.  */
-  --space-4: calc(
-    4 / 16 * 1rem
-  ); /** Sehr kompakt. Perfekt für den Abstand zwischen Label und Input oder Badges. */
-  --space-8: calc(
-    8 / 16 * 1rem
-  ); /** Die Basis-Einheit. Typischer Abstand zwischen Icon und Text oder Listen-Elementen.  */
-  --space-12: calc(
-    12 / 16 * 1rem
-  ); /** Der harmonische Zwischenschritt für kompakte Paddings (z.B. in Tabellen).  */
-  --space-16: calc(
-    16 / 16 * 1rem
-  ); /** Der globale Standard. Ideales Standard-Padding für Karten und Container.  */
-  --space-24: calc(
-    24 / 16 * 1rem
-  ); /** Großzügiges Padding für größere Desktop-Komponenten oder Hero-Cards.  */
-  --space-32: calc(
-    32 / 16 * 1rem
-  ); /** Beginn des Makro-Layouts. Abstand zwischen logischen Sektionen.  */
-  --space-48: calc(
-    48 / 16 * 1rem
-  ); /** Großer Abstand. Perfekt für Grid-Gaps oder White-Space auf Landingpages.  */
-  --space-64: calc(
-    64 / 16 * 1rem
-  ); /** Starker visueller Bruch. Abstand zwischen Hauptbereichen (z.B. Header zu Content).  */
-  --space-96: calc(
-    96 / 16 * 1rem
-  ); /** Maximaler Weißraum für großzügige Desktop-Layouts. */
-  --space-128: calc(128 / 16 * 1rem);
-  --serif: Americana BT;
-  --tracking-xs: calc(0.05 / 16 * 1rem);
-  --tracking-sm: calc(0.15 / 16 * 1rem);
-  --font-size-3xl: calc(44 / 16 * 1rem);
-  --font-size-4xl: calc(55 / 16 * 1rem);
-  --font-size-2xl: calc(35 / 16 * 1rem);
-  --font-size-base: calc(18 / 16 * 1rem);
-  --font-size-lg: calc(23 / 16 * 1rem);
-  --font-size-xl: calc(28 / 16 * 1rem);
-  --font-size-6xl: calc(120 / 16 * 1rem);
-  --font-size-5xl: calc(69 / 16 * 1rem);
-  --font-size-sm: calc(14 / 16 * 1rem);
+  --space-2: 2px; /** Haarlinien-Abstände, extrem feine UI-Tweakings.  */
+  --space-4: 4px; /** Sehr kompakt. Perfekt für den Abstand zwischen Label und Input oder Badges. */
+  --space-8: 8px; /** Die Basis-Einheit. Typischer Abstand zwischen Icon und Text oder Listen-Elementen.  */
+  --space-12: 12px; /** Der harmonische Zwischenschritt für kompakte Paddings (z.B. in Tabellen).  */
+  --space-16: 16px; /** Der globale Standard. Ideales Standard-Padding für Karten und Container.  */
+  --space-24: 24px; /** Großzügiges Padding für größere Desktop-Komponenten oder Hero-Cards.  */
+  --space-32: 32px; /** Beginn des Makro-Layouts. Abstand zwischen logischen Sektionen.  */
+  --space-48: 48px; /** Großer Abstand. Perfekt für Grid-Gaps oder White-Space auf Landingpages.  */
+  --space-64: 64px; /** Starker visueller Bruch. Abstand zwischen Hauptbereichen (z.B. Header zu Content).  */
+  --space-96: 96px; /** Maximaler Weißraum für großzügige Desktop-Layouts. */
+  --space-128: 128px;
+  --serif: 'Americana BT';
+  --tracking-xs: 0.05px;
+  --tracking-sm: 0.15px;
+  --font-size-3xl: 44px;
+  --font-size-4xl: 55px;
+  --font-size-2xl: 35px;
+  --font-size-base: 18px;
+  --font-size-lg: 23px;
+  --font-size-xl: 28px;
+  --font-size-6xl: 120px;
+  --font-size-5xl: 69px;
+  --font-size-sm: 14px;
   --regular: 400;
-  --border-radius-4: calc(4 / 16 * 1rem);
-  --border-radius-8: calc(8 / 16 * 1rem);
-  --border-radius-12: calc(12 / 16 * 1rem);
-  --border-radius-16: calc(16 / 16 * 1rem);
-  --border-radius-24: calc(24 / 16 * 1rem);
-  --border-radius-32: calc(32 / 16 * 1rem);
-  --border-radius-9999: calc(9999 / 16 * 1rem);
-  --size-12: calc(12 / 16 * 1rem);
-  --size-16: calc(
-    16 / 16 * 1rem
-  ); /** Kleine Inline-Icons (z.B. in Text-Links), Status-Indikatoren.  */
-  --size-20: calc(
-    20 / 16 * 1rem
-  ); /** Kompakte Icons für dichte Listen oder kleine Buttons. */
-  --size-24: calc(
-    24 / 16 * 1rem
-  ); /** Standard-Icon-Größe für das gesamte System (Material/​​​Apple-Standard). */
-  --size-32: calc(
-    32 / 16 * 1rem
-  ); /** Große Icons oder kleine Profilbilder (Avatare) in Navigationsleisten. */
-  --size-40: calc(
-    40 / 16 * 1rem
-  ); /** Standard-Avatar für Kontaktlisten oder User-Profile. */
-  --size-48: calc(
-    48 / 16 * 1rem
-  ); /** Große Avatare, Logos oder quadratische Medien-Thumbnails.  */
-  --sans-serif: Source Sans 3;
+  --border-radius-4: 4px;
+  --border-radius-8: 8px;
+  --border-radius-12: 12px;
+  --border-radius-16: 16px;
+  --border-radius-24: 24px;
+  --border-radius-32: 32px;
+  --border-radius-9999: 9999px;
+  --size-12: 12px;
+  --size-16: 16px; /** Kleine Inline-Icons (z.B. in Text-Links), Status-Indikatoren.  */
+  --size-20: 20px; /** Kompakte Icons für dichte Listen oder kleine Buttons. */
+  --size-24: 24px; /** Standard-Icon-Größe für das gesamte System (Material/​​​Apple-Standard). */
+  --size-32: 32px; /** Große Icons oder kleine Profilbilder (Avatare) in Navigationsleisten. */
+  --size-40: 40px; /** Standard-Avatar für Kontaktlisten oder User-Profile. */
+  --size-48: 48px; /** Große Avatare, Logos oder quadratische Medien-Thumbnails.  */
+  --sans-serif: 'Source Sans 3';
   --bold: 700;
   --color-sand-100: #f9f8f6;
   --color-sand-200: #f4f1ed;

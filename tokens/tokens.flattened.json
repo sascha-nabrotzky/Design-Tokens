@@ -1,121 +1,123 @@
 {
   "space": {
     "2": {
-      "$value": "calc(2 / 16 * 1rem)",
+      "$value": "2",
       "$type": "spacing",
       "$description": "Haarlinien-Abstände, extrem feine UI-Tweakings. "
     },
     "4": {
-      "$value": "calc(4 / 16 * 1rem)",
+      "$value": "4",
       "$type": "spacing",
       "$description": "Sehr kompakt. Perfekt für den Abstand zwischen Label und Input oder Badges."
     },
     "8": {
-      "$value": "calc(8 / 16 * 1rem)",
+      "$value": "8",
       "$type": "spacing",
       "$description": "Die Basis-Einheit. Typischer Abstand zwischen Icon und Text oder Listen-Elementen. "
     },
     "12": {
-      "$value": "calc(12 / 16 * 1rem)",
+      "$value": "12",
       "$type": "spacing",
       "$description": "Der harmonische Zwischenschritt für kompakte Paddings (z.B. in Tabellen). "
     },
     "16": {
-      "$value": "calc(16 / 16 * 1rem)",
+      "$value": "16",
       "$type": "spacing",
       "$description": "Der globale Standard. Ideales Standard-Padding für Karten und Container. "
     },
     "24": {
-      "$value": "calc(24 / 16 * 1rem)",
+      "$value": "24",
       "$type": "spacing",
       "$description": "Großzügiges Padding für größere Desktop-Komponenten oder Hero-Cards. "
     },
     "32": {
-      "$value": "calc(32 / 16 * 1rem)",
+      "$value": "32",
       "$type": "spacing",
       "$description": "Beginn des Makro-Layouts. Abstand zwischen logischen Sektionen. "
     },
     "48": {
-      "$value": "calc(48 / 16 * 1rem)",
+      "$value": "48",
       "$type": "spacing",
       "$description": "Großer Abstand. Perfekt für Grid-Gaps oder White-Space auf Landingpages. "
     },
     "64": {
-      "$value": "calc(64 / 16 * 1rem)",
+      "$value": "64",
       "$type": "spacing",
       "$description": "Starker visueller Bruch. Abstand zwischen Hauptbereichen (z.B. Header zu Content). "
     },
     "96": {
-      "$value": "calc(96 / 16 * 1rem)",
+      "$value": "96",
       "$type": "spacing",
       "$description": "Maximaler Weißraum für großzügige Desktop-Layouts."
     },
     "128": {
-      "$value": "calc(128 / 16 * 1rem)",
+      "$value": "128",
       "$type": "spacing",
       "$description": ""
     }
   },
   "serif": {
-    "$value": ["Americana BT"],
+    "$value": [
+      "Americana BT"
+    ],
     "$type": "fontFamilies",
     "$description": ""
   },
   "tracking": {
     "xs": {
-      "$value": "calc(0.05 / 16 * 1rem)",
+      "$value": "0.05",
       "$type": "letterSpacing",
       "$description": ""
     },
     "sm": {
-      "$value": "calc(0.15 / 16 * 1rem)",
+      "$value": "0.15",
       "$type": "letterSpacing",
       "$description": ""
     }
   },
   "font-size": {
     "3xl": {
-      "$value": "calc(44 / 16 * 1rem)",
+      "$value": "44",
       "$type": "fontSizes",
       "$description": ""
     },
     "4xl": {
-      "$value": "calc(55 / 16 * 1rem)",
+      "$value": "55",
       "$type": "fontSizes",
       "$description": ""
     },
     "2xl": {
-      "$value": "calc(35 / 16 * 1rem)",
+      "$value": "35",
       "$type": "fontSizes",
       "$description": ""
     },
     "base": {
-      "$value": "calc(18 / 16 * 1rem)",
+      "$value": "18",
       "$type": "fontSizes",
       "$description": ""
     },
     "lg": {
-      "$value": "calc(23 / 16 * 1rem)",
+      "$value": "23",
       "$type": "fontSizes",
       "$description": ""
     },
     "xl": {
-      "$value": "calc(28 / 16 * 1rem)",
+      "$value": "28",
       "$type": "fontSizes",
       "$description": ""
     },
     "6xl": {
-      "$value": "calc(120 / 16 * 1rem)",
+      "$value": "120",
       "$type": "fontSizes",
       "$description": ""
     },
     "5xl": {
-      "$value": "calc(69 / 16 * 1rem)",
+      "$value": "69",
       "$type": "fontSizes",
       "$description": ""
     },
     "sm": {
-      "$value": "calc(14 / 16 * 1rem)",
+      "$value": "14",
       "$type": "fontSizes",
       "$description": ""
     }
@@ -127,80 +129,82 @@
   },
   "border-radius": {
     "4": {
-      "$value": "calc(4 / 16 * 1rem)",
+      "$value": "4",
       "$type": "borderRadius",
       "$description": ""
     },
     "8": {
-      "$value": "calc(8 / 16 * 1rem)",
+      "$value": "8",
       "$type": "borderRadius",
       "$description": ""
     },
     "12": {
-      "$value": "calc(12 / 16 * 1rem)",
+      "$value": "12",
       "$type": "borderRadius",
       "$description": ""
     },
     "16": {
-      "$value": "calc(16 / 16 * 1rem)",
+      "$value": "16",
       "$type": "borderRadius",
       "$description": ""
     },
     "24": {
-      "$value": "calc(24 / 16 * 1rem)",
+      "$value": "24",
       "$type": "borderRadius",
       "$description": ""
     },
     "32": {
-      "$value": "calc(32 / 16 * 1rem)",
+      "$value": "32",
       "$type": "borderRadius",
       "$description": ""
     },
     "9999": {
-      "$value": "calc(9999 / 16 * 1rem)",
+      "$value": "9999",
       "$type": "borderRadius",
       "$description": ""
     }
   },
   "size": {
     "12": {
-      "$value": "calc(12 / 16 * 1rem)",
+      "$value": "12",
       "$type": "dimension",
       "$description": ""
     },
     "16": {
-      "$value": "calc(16 / 16 * 1rem)",
+      "$value": "16",
       "$type": "dimension",
       "$description": "Kleine Inline-Icons (z.B. in Text-Links), Status-Indikatoren. "
     },
     "20": {
-      "$value": "calc(20 / 16 * 1rem)",
+      "$value": "20",
       "$type": "dimension",
       "$description": "Kompakte Icons für dichte Listen oder kleine Buttons."
     },
     "24": {
-      "$value": "calc(24 / 16 * 1rem)",
+      "$value": "24",
       "$type": "dimension",
       "$description": "Standard-Icon-Größe für das gesamte System (Material/​​​Apple-Standard)."
     },
     "32": {
-      "$value": "calc(32 / 16 * 1rem)",
+      "$value": "32",
       "$type": "dimension",
       "$description": "Große Icons oder kleine Profilbilder (Avatare) in Navigationsleisten."
     },
     "40": {
-      "$value": "calc(40 / 16 * 1rem)",
+      "$value": "40",
       "$type": "dimension",
       "$description": "Standard-Avatar für Kontaktlisten oder User-Profile."
     },
     "48": {
-      "$value": "calc(48 / 16 * 1rem)",
+      "$value": "48",
       "$type": "dimension",
       "$description": "Große Avatare, Logos oder quadratische Medien-Thumbnails. "
     }
   },
   "sans-serif": {
-    "$value": ["Source Sans 3"],
+    "$value": [
+      "Source Sans 3"
+    ],
     "$type": "fontFamilies",
     "$description": ""
   },
@@ -259,42 +263,42 @@
     },
     "eucalyptus": {
       "100": {
-        "$value": "#f4f1f4",
+        "$value": "#ebf0ed",
         "$type": "color",
         "$description": ""
       },
       "200": {
-        "$value": "#e9e2e9",
+        "$value": "#d7e0db",
         "$type": "color",
         "$description": ""
       },
       "300": {
-        "$value": "#ded4df",
+        "$value": "#c4d1c9",
         "$type": "color",
         "$description": ""
       },
       "400": {
-        "$value": "#d3c5d4",
+        "$value": "#b0c1b7",
         "$type": "color",
         "$description": ""
       },
       "500": {
-        "$value": "#c8b7c9",
+        "$value": "#9cb2a5",
         "$type": "color",
         "$description": ""
       },
       "600": {
-        "$value": "#a092a1",
+        "$value": "#7d8e84",
         "$type": "color",
         "$description": ""
       },
       "700": {
-        "$value": "#786e79",
+        "$value": "#5e6b63",
         "$type": "color",
         "$description": ""
       },
       "800": {
-        "$value": "#504950",
+        "$value": "#3e4742",
         "$type": "color",
         "$description": ""
       },
@@ -421,13 +425,6 @@
           "$value": "{font-size.4xl}",
           "$type": "fontSizes",
           "$description": ""
-        }
-      },
-      "focus": {
-        "ring": {
-          "$value": "{color.green.700}",
-          "$type": "color",
-          "$description": "Sichtbarer Tastaturfokus auf hellen Oberflaechen"
         }
       },
       "button": {
